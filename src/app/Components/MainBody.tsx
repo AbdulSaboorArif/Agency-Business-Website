@@ -4,7 +4,7 @@ function MainBody() {
   return (
     <main className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
       <div className="flex flex-col lg:items-start md:items-center lg:flex-row justify-between gap-8 lg:gap-12">
-        <section className="w-[500px] h-auto flex flex-col ">
+        <section className="h-auto flex flex-col ">
           <div className="space-y-6">
             <h1 className="text-3xl font-bold ms:text-4xl lg:text-5xl text-white mb-4 ">
               Discover AI Digital Services &
