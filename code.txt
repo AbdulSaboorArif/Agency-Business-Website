@@ -1,0 +1,121 @@
+{/* <section className="py-20 px-4  min-h-screen relative overflow-hidden">
+//   {/* Animated Background Elements 
+//   <div className="absolute inset-0 overflow-hidden">
+//     <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+//     <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+//     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-spin-slow"></div>
+//   </div>
+
+//   <div className="max-w-7xl mx-auto relative border-2">
+//     {/* Title And Heading 
+//     <div className="text-center py-10">
+//       <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-500 to-purple-400 bg-clip-text text-transparent">
+//         What We Offer
+//       </h1>
+//       <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+//         Comprehensive digital solutions with cutting-edge technology to
+//         elevate your business
+//       </p>
+//     </div>
+
+//     {/* Carsonal Button 
+//     <div className="relative perspective-1000">
+//       <button
+//         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-20 bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300 text-white shadow-2xl rounded-lg"
+//         onClick={prevServices}
+//       >
+//         <ChevronLeft className="w-10 h-10 " />
+//       </button>
+//       <button
+//         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-20 bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-300 text-white shadow-2xl rounded-lg"
+//         onClick={nextServices}
+//       >
+//         <ChevronRight className="w-10 h-10 " />
+//       </button>
+//     </div>
+//     {/* Main Container 
+//     <div className="mx-12 transform-gpu transition-all duration-700 ease-out hover:scale-105">
+//       <div className="relative group">
+//         {/* Card Reflection 
+//         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl transform rotate-1 scale-105 opacity-30 blur-sm"></div>
+//         {/* Main Card */}
+//         <div
+//           className={`relative bg-gradient-to-br ${currentServices.gradient} p-1 rounded-3xl shadow-2xl transform transition-all duration-500 hover:shadow-4xl hover:-translate-y-2`}
+//         >
+//           <div className="bg-gray-900/90 backdrop-blur-xl rounded-3xl border border-white/10 relative overflow-hidden">
+//             {/* Animated Background Pattern */}
+//             <div className="absolute inset-0 opacity-10">
+//               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
+//               <div className="absolute top-4 right-4 w-32 h-32 border border-white/10 rounded-full animate-spin-slow"></div>
+//               <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/10 rounded-full animate-pulse"></div>
+//             </div>
+//             {/* Features Grid */}
+//             <div className="grid lg:grid-cols-2 gap-0 relative z-10">
+//               <div className="p-8 md:p-12 flex flex-col justify-center">
+//                 <div className="mb-6 ">
+//                   <div
+//                     className={`inline-flex p-4 bg-gradient-to-br ${currentServices.gradient} rounded-xl shawdow-lg trasform transition-all duration-300 hover:scale-110 hover:rotate-3`}
+//                   >
+//                     <IconComponents className="h-8 w-8 text-white" />
+//                   </div>
+//                 </div>
+
+//                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 ">
+//                   {currentServices.title}
+//                 </h2>
+//                 <p className="text-white text-lg leading-relaxed mb-6">
+//                   {currentServices.description}
+//                 </p>
+//                 {/* Features Grid */}
+//                 <div className="grid grid-cols-1 gap-3 mb-8">
+//                   {currentServices.feature.map((feature, index) => (
+//                     <div
+//                       key={index}
+//                       className="flex text-center space-x-3 p-3 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+//                     >
+//                       <div
+//                         className={`w-2 h-2 bg-gradient-to-r ${currentServices.gradient} rounded-full shadow-lg`}
+//                       ></div>
+//                       <span className="text-gray-200 font-medium text-sm">
+//                         {feature}
+//                       </span>
+//                     </div>
+//                   ))}
+//                 </div>
+//                 {/* Button */}
+//                 <div className="">
+//                   <Link href={currentServices.link}>
+//                     <button
+//                       className={`bg-gradient-to-r ${currentServices.gradient} hover:scale-105 transform transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-2xl group w-full sm:w-auto`}
+//                     >
+//                       Explore Service
+//                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+//                     </button>
+//                   </Link>
+//                 </div>
+//               </div>
+//               {/* Image Side */}
+//               <div className="relative lg:min-h-[500px] min-h-[300px] overflow-hidden rounded-r-3xl lg:rounded-l-none rounded-l-3xl border-2 ">
+//                 <div className="absolute inset-0 transform transition-all duration-500 hover:scale-110">
+//                   <Image
+//                     src={currentServices.image || "/placeholder.svg"}
+//                     alt={currentServices.imageAlt || "Alt"}
+//                     fill
+//                     className="object-cover"
+//                     sizes="(max-width: 768px) 100vw, 50vw"
+//                   />
+//                   <div
+//                     className={`absolute inset-0 bg-gradient-to-l ${currentServices.gradient} opacity-20`}
+//                   ></div>
+//                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+//                 </div>
+//                 <div className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full animate-pulse"></div>
+//                 <div className="absolute bottom-4 left-4 w-12 h-12 border-2 border-white/20 rounded-full animate-bounce"></div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </section>

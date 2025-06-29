@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function MainBody() {
   return (
@@ -20,9 +21,11 @@ function MainBody() {
           </p>
 
           <div className="">
-            <button className="group relative bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 mb-8">
+            <Link href="/Services">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-400 transform hover:scale-125 hover:shadow-3xl hover:shadow-purple-500/25 text-white font-semibold px-10 py-4 rounded-2xl mb-8">
               Get Started
             </button>
+            </Link>
           </div>
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-700 mt-2">
             <div className="text-center">
