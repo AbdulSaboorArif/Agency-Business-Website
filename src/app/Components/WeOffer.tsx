@@ -189,7 +189,7 @@ function WeOffer() {
   const IconComponents = currentServices.icon;
 
   return (
-    <section className="py-20 px-4  min-h-screen relative overflow-hidden">
+    <section className="py-20 px-4 min-h-screen relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -199,10 +199,10 @@ function WeOffer() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl md:text-6xl sm:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
             What We Offer
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-xl mx-auto">
             Comprehensive digital solutions with cutting-edge technology to
             elevate your business
           </p>
@@ -224,7 +224,7 @@ function WeOffer() {
           </button>
 
           {/* 3D Service Card with Split Layout */}
-          <div className="mx-12 transform-gpu transition-all duration-700 ease-out hover:scale-105">
+          <div className="lg:mx-12 sm:mx-2 transform-gpu transition-all duration-700 ease-out hover:scale-105">
             <div className="relative group">
               {/* Card Reflection */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl transform rotate-1 scale-105 opacity-30 blur-sm"></div>
@@ -242,7 +242,7 @@ function WeOffer() {
                   </div>
 
                   {/* Split Layout Content */}
-                  <div className="grid lg:grid-cols-2 gap-0 relative z-10">
+                  <div className="grid lg:grid-cols-2 gap-0 relative">
                     {/* Content Side */}
                     <div className="p-8 md:p-12 flex flex-col justify-center">
                       {/* Icon */}
@@ -326,7 +326,7 @@ function WeOffer() {
             <span className="font-medium">
               {currentIndex + 1} of {serviceInfo.length}
             </span>
-            <div className="">
+            <div className="space-x-4">
               {serviceInfo.map((_, index) => (
                 <button
                   key={index}

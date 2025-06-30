@@ -2,6 +2,7 @@
 import MainBody from "./Components/MainBody";
 import Features from "./Components/Features";
 import WeOffer from "./Components/WeOffer";
+import Footer from "./Components/Footer"
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <MainBody />
       <Features/>
       <WeOffer/>
+      <Footer/>
     </main>
   );
 }
