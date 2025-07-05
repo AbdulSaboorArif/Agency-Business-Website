@@ -35,7 +35,7 @@ function WeOffer() {
         "Seo Ready",
       ],
       gradient: "from-blue-600 via-purple-600 to-blue-800",
-      link: "",
+      link: "/Services/DynamicServices",
       image: "",
       imageAlt:
         "Modern web development workspace with code editor and responsive design mockups",
@@ -55,7 +55,7 @@ function WeOffer() {
         "User Friendly",
       ],
       gradient: "from-purple-600 via-pink-500 to-purple-800",
-      link: "",
+      link: "/Services/DynamicServices",
       image: "",
       imageAlt:
         "Creative design workspace with color palettes, wireframes, and design tools",
@@ -74,7 +74,7 @@ function WeOffer() {
         "Social Media Ready",
       ],
       gradient: "from-green-600 via-teal-500 to-green-800",
-      link: "",
+      link: "/Services/DynamicServices",
       image: "",
       imageAlt:
         "Professional video editing setup with timeline, effects, and preview monitors",
@@ -93,7 +93,7 @@ function WeOffer() {
         "Digital Graphics",
       ],
       gradient: "from-orange-500 via-red-500 to-orange-500",
-      link: "/services/graphic-designing",
+      link: "/Services/DynamicServices",
       image: "/placeholder.svg?height=400&width=500&text=Graphic+Design",
       imageAlt:
         "Creative graphic design workspace with logos, branding materials, and design tools",
@@ -112,7 +112,7 @@ function WeOffer() {
         "Analytics Tracking",
       ],
       gradient: "from-yellow-500 via-orange-500 to-yellow-600",
-      link: "/services/seo-optimization",
+      link: "/Services/DynamicServices",
       image: "/placeholder.svg?height=400&width=500&text=SEO+Analytics",
       imageAlt:
         "SEO analytics dashboard showing search rankings, traffic growth, and keyword performance",
@@ -131,7 +131,7 @@ function WeOffer() {
         "PPC Advertising",
       ],
       gradient: "from-indigo-600 via-blue-600 to-indigo-800",
-      link: "/services/digital-marketing",
+      link: "/Services/DynamicServices",
       image: "/placeholder.svg?height=400&width=500&text=Digital+Marketing",
       imageAlt:
         "Digital marketing dashboard with social media metrics, campaign analytics, and growth charts",
@@ -150,7 +150,7 @@ function WeOffer() {
         "Custom AI Solutions",
       ],
       gradient: "from-cyan-600 via-blue-600 to-cyan-800",
-      link: "/services/agentic-ai",
+      link: "/Services/DynamicServices",
       image: "/placeholder.svg?height=400&width=500&text=AI+Technology",
       imageAlt:
         "Futuristic AI interface with neural networks, chatbot interactions, and machine learning visualizations",
@@ -168,7 +168,7 @@ function WeOffer() {
         "Ongoing Support",
       ],
       gradient: "from-rose-500 via-pink-500 to-rose-500",
-      link: "/services/more-fields",
+      link: "/Services/DynamicServices",
       image: "/placeholder.svg?height=400&width=500&text=Innovation+Hub",
       imageAlt:
         "Innovation workspace with emerging technologies, consulting materials, and solution blueprints",

@@ -119,3 +119,349 @@
 //     </div>
 //   </div>
 // </section>
+
+
+
+
+
+
+// "use client"
+
+// import { useState } from "react"
+// import { Globe, Palette, Video, ImageIcon, Search, TrendingUp, Bot, Plus, ArrowRight, Star, Heart } from "lucide-react"
+// import Link from "next/link"
+// import Image from "next/image"
+// import { Button } from "@/components/ui/button"
+// import { Badge } from "@/components/ui/badge"
+// import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+
+// export default function Services() {
+//   const [favorites, setFavorites] = useState<number[]>([])
+
+//   const serviceInfo = [
+//     {
+//       id: 1,
+//       title: "Website Development",
+//       description:
+//         "Custom web applications built with modern technologies like React, Next.js, and Node.js. We create responsive, fast, and scalable websites tailored to your business needs.",
+//       icon: Globe,
+//       features: ["Responsive Design", "Modern Frameworks", "Performance Optimization", "Fully Dynamic", "SEO Ready"],
+//       gradient: "from-blue-600 via-purple-600 to-blue-800",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=Web+Development",
+//       imageAlt: "Modern web development workspace with code editor and responsive design mockups",
+//       price: "$2,500",
+//       originalPrice: "$3,000",
+//       rating: 4.9,
+//       reviews: 127,
+//       category: "Development",
+//       popular: true,
+//     },
+//     {
+//       id: 2,
+//       title: "Website Designing",
+//       description:
+//         "Creative and user-friendly website designs that capture your brand essence. We focus on UI/UX principles to create engaging digital experiences.",
+//       icon: Palette,
+//       features: ["UI/UX Design", "Brand Integration", "Responsive for All Size", "User Experience", "User Friendly"],
+//       gradient: "from-purple-600 via-pink-500 to-purple-800",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=Web+Design",
+//       imageAlt: "Creative design workspace with color palettes, wireframes, and design tools",
+//       price: "$1,800",
+//       originalPrice: "$2,200",
+//       rating: 4.8,
+//       reviews: 89,
+//       category: "Design",
+//       popular: false,
+//     },
+//     {
+//       id: 3,
+//       title: "Video Editing",
+//       description:
+//         "Professional video editing services for marketing content, social media, tutorials and promotional videos. We bring your vision to life with creative storytelling.",
+//       icon: Video,
+//       features: ["Motion Graphics", "Color Correction", "Audio Enhancement", "Social Media Ready"],
+//       gradient: "from-green-600 via-teal-500 to-green-800",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=Video+Editing",
+//       imageAlt: "Professional video editing setup with timeline, effects, and preview monitors",
+//       price: "$800",
+//       originalPrice: "$1,000",
+//       rating: 4.7,
+//       reviews: 156,
+//       category: "Media",
+//       popular: false,
+//     },
+//     {
+//       id: 4,
+//       title: "Graphic Designing",
+//       description:
+//         "Eye-catching visual designs for branding, marketing materials, social media content, and print media. We create designs that communicate your message effectively.",
+//       icon: ImageIcon,
+//       features: ["Logo Design", "Brand Identity", "Print Design", "Digital Graphics"],
+//       gradient: "from-orange-500 via-red-500 to-orange-500",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=Graphic+Design",
+//       imageAlt: "Creative graphic design workspace with logos, branding materials, and design tools",
+//       price: "$600",
+//       originalPrice: "$750",
+//       rating: 4.6,
+//       reviews: 203,
+//       category: "Design",
+//       popular: false,
+//     },
+//     {
+//       id: 5,
+//       title: "SEO Optimization",
+//       description:
+//         "Comprehensive SEO strategies to improve your website's visibility and ranking on search engines. We help drive organic traffic and increase online presence.",
+//       icon: Search,
+//       features: ["Keyword Research", "On-Page SEO", "Technical SEO", "Analytics Tracking"],
+//       gradient: "from-yellow-500 via-orange-500 to-yellow-600",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=SEO+Analytics",
+//       imageAlt: "SEO analytics dashboard showing search rankings, traffic growth, and keyword performance",
+//       price: "$1,200",
+//       originalPrice: "$1,500",
+//       rating: 4.8,
+//       reviews: 94,
+//       category: "Marketing",
+//       popular: true,
+//     },
+//     {
+//       id: 6,
+//       title: "Digital Marketing",
+//       description:
+//         "Full-service digital marketing solutions including social media marketing, content strategy, email campaigns, and online advertising to grow your business.",
+//       icon: TrendingUp,
+//       features: ["Social Media Marketing", "Content Strategy", "Email Campaigns", "PPC Advertising"],
+//       gradient: "from-indigo-600 via-blue-600 to-indigo-800",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=Digital+Marketing",
+//       imageAlt: "Digital marketing dashboard with social media metrics, campaign analytics, and growth charts",
+//       price: "$2,000",
+//       originalPrice: "$2,400",
+//       rating: 4.9,
+//       reviews: 178,
+//       category: "Marketing",
+//       popular: true,
+//     },
+//     {
+//       id: 7,
+//       title: "Agentic AI Creation",
+//       description:
+//         "Cutting-edge AI solutions and intelligent agents that automate processes, enhance user experiences, and provide smart business insights using the latest AI technologies.",
+//       icon: Bot,
+//       features: ["AI Chatbots", "Process Automation", "Machine Learning", "Custom AI Solutions"],
+//       gradient: "from-cyan-600 via-blue-600 to-cyan-800",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=AI+Technology",
+//       imageAlt:
+//         "Futuristic AI interface with neural networks, chatbot interactions, and machine learning visualizations",
+//       price: "$3,500",
+//       originalPrice: "$4,200",
+//       rating: 5.0,
+//       reviews: 67,
+//       category: "Technology",
+//       popular: true,
+//     },
+//     {
+//       id: 8,
+//       title: "Custom Solutions",
+//       description:
+//         "We continuously expand our services to meet evolving digital needs. From emerging technologies to specialized solutions, we're here to help your business thrive.",
+//       icon: Plus,
+//       features: ["Consulting Services", "Custom Solutions", "Technology Integration", "Ongoing Support"],
+//       gradient: "from-rose-500 via-pink-500 to-rose-500",
+//       link: "/Services/DynamicServices",
+//       image: "/placeholder.svg?height=300&width=400&text=Innovation+Hub",
+//       imageAlt: "Innovation workspace with emerging technologies, consulting materials, and solution blueprints",
+//       price: "Custom",
+//       originalPrice: "",
+//       rating: 4.7,
+//       reviews: 45,
+//       category: "Consulting",
+//       popular: false,
+//     },
+//   ]
+
+//   const toggleFavorite = (serviceId: number) => {
+//     setFavorites((prev) => (prev.includes(serviceId) ? prev.filter((id) => id !== serviceId) : [...prev, serviceId]))
+//   }
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+//       {/* Hero Section */}
+//       <div className="relative py-20 px-4 text-center">
+//         <div className="absolute inset-0 overflow-hidden">
+//           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+//           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+//         </div>
+
+//         <div className="relative z-10 max-w-4xl mx-auto">
+//           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
+//             Our Digital Services
+//           </h1>
+//           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+//             Comprehensive digital solutions with cutting-edge technology to elevate your business to new heights
+//           </p>
+//           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+//             <Badge variant="outline" className="border-blue-500/30 text-blue-300">
+//               8 Services Available
+//             </Badge>
+//             <Badge variant="outline" className="border-green-500/30 text-green-300">
+//               Expert Team
+//             </Badge>
+//             <Badge variant="outline" className="border-purple-500/30 text-purple-300">
+//               Custom Solutions
+//             </Badge>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Services Grid */}
+//       <div className="max-w-7xl mx-auto px-4 pb-20">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+//           {serviceInfo.map((service) => {
+//             const IconComponent = service.icon
+//             const isFavorite = favorites.includes(service.id)
+
+//             return (
+//               <Card
+//                 key={service.id}
+//                 className="group relative bg-gray-800/50 border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden backdrop-blur-sm"
+//               >
+//                 {/* Popular Badge */}
+//                 {service.popular && (
+//                   <div className="absolute top-3 left-3 z-10">
+//                     <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0">Popular</Badge>
+//                   </div>
+//                 )}
+
+//                 {/* Favorite Button */}
+//                 <button
+//                   onClick={() => toggleFavorite(service.id)}
+//                   className="absolute top-3 right-3 z-10 p-2 rounded-full bg-black/20 backdrop-blur-sm hover:bg-black/40 transition-all duration-200"
+//                 >
+//                   <Heart
+//                     className={`w-4 h-4 transition-colors ${
+//                       isFavorite ? "fill-red-500 text-red-500" : "text-white hover:text-red-400"
+//                     }`}
+//                   />
+//                 </button>
+
+//                 <CardHeader className="p-0">
+//                   {/* Service Image */}
+//                   <div className="relative h-48 overflow-hidden">
+//                     <Image
+//                       src={service.image || "/placeholder.svg"}
+//                       alt={service.imageAlt}
+//                       fill
+//                       className="object-cover transition-transform duration-300 group-hover:scale-110"
+//                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+//                     />
+//                     <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-20`}></div>
+//                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+
+//                     {/* Service Icon */}
+//                     <div className="absolute bottom-4 left-4">
+//                       <div className={`p-3 bg-gradient-to-br ${service.gradient} rounded-lg shadow-lg`}>
+//                         <IconComponent className="w-6 h-6 text-white" />
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </CardHeader>
+
+//                 <CardContent className="p-6">
+//                   {/* Category and Rating */}
+//                   <div className="flex items-center justify-between mb-3">
+//                     <Badge variant="secondary" className="bg-gray-700/50 text-gray-300 border-0">
+//                       {service.category}
+//                     </Badge>
+//                     <div className="flex items-center gap-1">
+//                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+//                       <span className="text-sm text-gray-300">{service.rating}</span>
+//                       <span className="text-xs text-gray-500">({service.reviews})</span>
+//                     </div>
+//                   </div>
+
+//                   {/* Service Title */}
+//                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+//                     {service.title}
+//                   </h3>
+
+//                   {/* Service Description */}
+//                   <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">{service.description}</p>
+
+//                   {/* Features */}
+//                   <div className="flex flex-wrap gap-1 mb-4">
+//                     {service.features.slice(0, 3).map((feature, index) => (
+//                       <Badge
+//                         key={index}
+//                         variant="outline"
+//                         className="text-xs border-gray-600/50 text-gray-400 hover:border-gray-500/50"
+//                       >
+//                         {feature}
+//                       </Badge>
+//                     ))}
+//                     {service.features.length > 3 && (
+//                       <Badge variant="outline" className="text-xs border-gray-600/50 text-gray-400">
+//                         +{service.features.length - 3} more
+//                       </Badge>
+//                     )}
+//                   </div>
+//                 </CardContent>
+
+//                 <CardFooter className="p-6 pt-0">
+//                   {/* Pricing */}
+//                   <div className="flex items-center justify-between w-full mb-4">
+//                     <div className="flex items-center gap-2">
+//                       <span className="text-2xl font-bold text-white">{service.price}</span>
+//                       {service.originalPrice && (
+//                         <span className="text-sm text-gray-500 line-through">{service.originalPrice}</span>
+//                       )}
+//                     </div>
+//                   </div>
+
+//                   {/* Action Buttons */}
+//                   <div className="flex gap-2 w-full">
+//                     <Link href={service.link} className="flex-1">
+//                       <Button
+//                         className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90 text-white border-0 group`}
+//                       >
+//                         Get Started
+//                         <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+//                       </Button>
+//                     </Link>
+//                   </div>
+//                 </CardFooter>
+//               </Card>
+//             )
+//           })}
+//         </div>
+
+//         {/* Call to Action */}
+//         <div className="text-center mt-16">
+//           <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm">
+//             <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
+//             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+//               {
+//                 "Don't see exactly what you're looking for? We specialize in creating custom digital solutions tailored to your unique business needs."
+//               }
+//             </p>
+//             <Link href="/Contact">
+//               <Button
+//                 size="lg"
+//                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+//               >
+//                 Contact Us for Custom Quote
+//                 <ArrowRight className="w-5 h-5 ml-2" />
+//               </Button>
+//             </Link>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
