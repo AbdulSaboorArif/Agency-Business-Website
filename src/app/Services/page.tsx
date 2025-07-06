@@ -18,6 +18,7 @@ import {
 import Link from "next/link"
 import Image from "next/image"
 import { createClient } from "next-sanity"
+import Header from "../Components/Header"
 
 const sanity = createClient({
   projectId: "5o717i87",
@@ -137,6 +138,7 @@ export default function Services() {
   }
 
   return (
+    <>
     <Header/>
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
@@ -325,5 +327,6 @@ export default function Services() {
         </div>
       </div>
     </div>
+    </>
   )
 }
