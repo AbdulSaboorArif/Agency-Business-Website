@@ -15,11 +15,11 @@ export default function Header() {
     <header className="w-full max-w-[1440px] bg-[#2B2B2B] h-auto sm:h-[100px] mx-auto">
       <div className="flex flex-wrap justify-between justify-items-center px-4 py-4 lg:px-6 lg:py-5">
         <div className="flex items-center">
-          <h1 className="text-xl sm:text-2xl lg:text-[34px] font-bold">
+          <h1 className="text-white text-xl sm:text-2xl lg:text-[34px] font-bold">
             Digital <span>Services</span>
           </h1>
         </div>
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="text-white hidden lg:flex items-center space-x-8">
           <Link href="/" className="text-base font-semibold xl:text-lg">
             Home
           </Link>
@@ -72,7 +72,7 @@ export default function Header() {
               Services
             </Link>
           </nav>
-          <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200 lg:hidden">
+          <div className="text-white flex flex-col space-y-3 pt-4 border-t border-gray-200 lg:hidden">
             <Link href="/Signin" onClick={() => setIsMenuOpen(false)}>
               <button className="w-full bg-[#A259FF] hover:bg-[#8B47E6] py-3 px-6 rounded-3xl text-white font-semibold text-lg transition-colors duration-200">
                 Sign In
