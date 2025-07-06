@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="w-full max-w-[1440px] bg-[#2B2B2B] h-auto sm:h-[100px] mx-auto">
       <div className="flex flex-wrap justify-between justify-items-center px-4 py-4 lg:px-6 lg:py-5">
-        <div className="flex items-center">
+        <div className="text-white flex items-center">
           <h1 className="text-white text-xl sm:text-2xl lg:text-[34px] font-bold">
             Digital <span>Services</span>
           </h1>
